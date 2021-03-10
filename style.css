@@ -1,0 +1,692 @@
+/* 
+
+Global View 
+
+All (pages excluding about)
+
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* use viewport-relative units to cover page fully */
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: inherit;
+  font-weight:300;
+  font-size:16px;
+}
+
+html {
+  position: relative;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+h1 {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 40px;
+}
+/* Footer */
+footer {
+  position:absolute;
+  bottom:0;
+  height: 160px;
+  width: 100%;
+  padding: 0 20px 0 20px;
+  
+}
+footer a {
+  text-decoration:none;
+  color:black;
+}
+footer p {
+  color:grey;
+}
+/* Header */
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-top:20px;
+}
+.intro a {
+  text-decoration: none;
+  color:black;
+}
+.intro h1:hover{
+  color:rgb(94, 92, 92);
+}
+/* Navigation */
+.navButton {
+  text-decoration: none;
+  color: white;
+  padding: 11px 0 11px 0;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+}
+.navButton a {
+  text-decoration: none;
+  color: black;
+  display:flex;
+  padding: 0 20px 0 20px;
+}
+.navButton a:hover{
+color:rgb(94, 92, 92);
+}
+/* Drop down */
+.dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  padding-top: 12.95px;
+  border: none;
+}
+.dropdown .navButton {
+  min-width: fit-content;
+  color: #fC5E55;
+  background-color:white;
+  border: none;
+}
+/* More button */
+a.btn.btn-primary{
+  color:black;
+  display:block;
+  border-color: black;
+  border-style: solid;
+  border-radius:20;
+  border-width: 2.5px;
+  width:fit-content;
+  margin-bottom:50px;
+  align-items: center;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto; 
+  background-color:white;
+  padding:9px;
+}
+a.btn {
+  padding:9px;
+  color:black;
+  font-size:16px;
+}
+.more h1{
+  color:black;
+  font-size:16px;
+}
+a.btn.btn-primary:hover {
+  color: #ffffff;
+  background-color:rgb(94, 92, 92);
+}
+a.btn.btn-primary:hover {
+  color: #ffffff;
+}
+a.btn.btn-primary {
+  text-decoration: none;
+}
+
+
+
+
+/* Hiding the mobile nav */
+span {
+  display:none;
+}
+.mySidenav {
+  display:none !important;
+}
+.sidenav {
+  display:none !important;
+}
+/* Sizing the image */
+.col img {
+  width:100%;
+  height:auto;
+}
+
+
+
+
+/* 
+
+About page 
+
+*/
+
+.About {
+  margin-top:100px;
+  display:flex;
+}
+.column {
+  width:33.3333333333%;
+  margin-top:40px;
+}
+.experience {
+  padding-top:50px;
+}
+
+/* 
+
+The Gallery for (Index, Gallery and Project Pages)
+
+*/
+
+.gallery{
+}
+.col  {
+  box-sizing:border-box;
+  width:24%;
+  margin-top:30px;
+}
+
+
+
+/* Zoom effect */
+.img-hover-zoom {
+  overflow: hidden; 
+}
+.img-hover-zoom img {
+  transition: transform .5s ease;
+  max-height: 300px;
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+
+
+/* Search filter */
+.container {
+  overflow: hidden;
+}
+.filterDiv {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  display: none; /* Hidden by default */
+}
+.show {
+  display: block;
+}
+
+#myBtnContainer {
+  margin-top:20px !important;
+}
+
+.btn {
+  margin-top:10px;
+  border: none;
+  margin-right:5px;
+  outline: none;
+  padding:9px;
+  background-color: white;
+  border-color:black;
+  border-width:2px;
+  border-style:solid;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn:hover {
+  color: #ffffff;
+  background-color:rgb(94, 92, 92);
+}
+.btn.active {
+  background-color: black;
+  color: white;
+}
+.search{ 
+}
+
+
+/* 
+
+Project pages 
+
+*/
+
+.description {
+  padding-top:20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  font-size:14px;
+  color:rgb(66, 65, 65);
+}
+.img-hover-zoom > img {
+  object-fit:cover;
+}
+
+/* Image Opens on click */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  display: block;
+  width: 1400px;
+  margin: 0;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+/* Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  display:block;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* 
+
+Sizes in between
+
+*/
+
+@media (max-width:1500px) {
+  .col {
+    width: 32%;} 
+
+    .hide {
+      display:none !important;
+      display:block;
+    }
+}
+
+/* 
+
+Tablet view 
+
+*/
+
+@media (max-width:768px) {
+  .col {
+    width:48.5%;
+  }
+  header h1 {
+    font-size:28px;
+  }
+  .more {
+    display:block;
+    border-color: black;
+    border-style: solid;
+    border-radius:20;
+    border-width: 2.5px;
+    width:fit-content;
+    padding-top:1px;
+    padding-bottom:1px;
+    margin-bottom:50px;
+    align-items: center;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .more h1{
+    padding-right:10px;
+    padding-left:10px;
+    color:black;
+    font-size:13px;
+  }
+}
+
+/* 
+
+Ipad Pro
+
+*/
+
+@media (max-width:1024px) {
+  .col {
+    width:48.5%;
+  }
+  header h1 {
+    font-size:28px;
+  }
+  .more {
+    display:block;
+    border-color: black;
+    border-style: solid;
+    border-radius:20;
+    border-width: 2.5px;
+    width:fit-content;
+    padding-top:1px;
+    padding-bottom:1px;
+    margin-bottom:50px;
+    align-items: center;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .more h1{
+    padding-right:10px;
+    padding-left:10px;
+    color:black;
+    font-size:13px;
+  }
+}
+
+/* 
+
+Surface Pro
+
+*/
+
+@media (max-width:540px) {
+  .col {
+    width:48.5%;
+  }
+  header h1 {
+    font-size:28px;
+  }
+  .more {
+    display:block;
+    border-color: black;
+    border-style: solid;
+    border-radius:20;
+    border-width: 2.5px;
+    width:fit-content;
+    padding-top:1px;
+    padding-bottom:1px;
+    margin-bottom:50px;
+    align-items: center;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .more h1{
+    padding-right:10px;
+    padding-left:10px;
+    color:black;
+    font-size:13px;
+  }
+  .nav {
+    display:none;
+  }
+  .hide-mobile-only {
+    display:none;
+    background-color:yellow; 
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(211, 211, 211);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display:block !important;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  span {
+    display:block; 
+  }
+}
+
+
+/* 
+
+Mobile view 
+
+*/
+
+@media (max-width:400px) {
+  header h1 {
+    font-size:18px;
+  }
+  body {
+    font-size:13px;
+  }
+  .nav {
+    display:none;
+  }
+  .col {
+    width:100%;
+  }
+  .Gallery {
+    padding-top:0px;
+  }
+  .hide-mobile-only {
+    display:none;
+    background-color:yellow; 
+  }
+  .more {
+    display:block;
+    border-color: black;
+    border-style: solid;
+    border-radius:20;
+    border-width: 2.5px;
+    width:fit-content;
+    padding-top:1px;
+    padding-bottom:1px;
+    align-items: center;
+    text-align:center;
+  }
+  .more h1{
+    padding-right:10px;
+    padding-left:10px;
+    color:black;
+    font-size:13px;
+  }
+  .container {
+    margin: 10px 10px 140px 10px;
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(211, 211, 211);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display:block !important;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  span {
+    display:block; 
+  }
+  .mySidenav {
+    display:block;
+  }
+  .sidenav {
+    display:block;
+  }
+  .Search {
+    padding-bottom:40px !important;
+  }
+}
+
+/* 
+
+Galaxy S5
+
+*/
+
+@media (max-width:360px) {
+  header h1 {
+    font-size:18px;
+  }
+  body {
+    font-size:13px;
+  }
+  .nav {
+    display:none;
+  }
+  .col {
+    width:100%;
+  }
+  .Gallery {
+    padding-top:0px;
+  }
+  .hide-mobile-only {
+    display:none;
+    background-color:yellow; 
+  }
+  .more {
+    display:block;
+    border-color: black;
+    border-style: solid;
+    border-radius:20;
+    border-width: 2.5px;
+    width:fit-content;
+    padding-top:1px;
+    padding-bottom:1px;
+    align-items: center;
+    text-align:center;
+  }
+  .more h1{
+    padding-right:10px;
+    padding-left:10px;
+    color:black;
+    font-size:13px;
+  }
+  .container {
+    margin: 10px 10px 140px 10px;
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(211, 211, 211);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display:block !important;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  span {
+    display:block; 
+  }
+  .mySidenav {
+    display:block;
+  }
+  .sidenav {
+    display:block;
+  }
+  .Search {
+    padding-bottom:40px !important;
+  }
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
