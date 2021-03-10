@@ -26,14 +26,16 @@
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <div id="main" class="d-none">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-            </div>
             <!-- This is the navigation for website -->
             <div class="col-4 d-inline-block text-center my-auto">
-                <a class="px-3" href="index.html">Home</a>
-                <a class="px-3" href="about.html">About</a>
-                <a class="px-3" href="mailto:elizabethzrose@outlook.com">Contact</a>
+                <div id="main" class="d-md-block d-lg-none">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+                </div>
+                <div class="d-none d-lg-block">
+                    <a class="px-3" href="index.html">Home</a>
+                    <a class="px-3" href="about.html">About</a>
+                    <a class="px-3" href="mailto:elizabethzrose@outlook.com">Contact</a>
+                </div>
             </div>
         </div>
 

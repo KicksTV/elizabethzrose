@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+image-url: "https://elizabethzrose-site-images.s3.eu-west-2.amazonaws.com/Images/"
 ---
 
     
@@ -24,58 +25,63 @@ title: Home
         <!-- The gallery -->
         <div class="col-3 py-3 filter print featured">
             <a href="Art_from_code.html">
-                <div class="img-hover-zoom"><img src="Images/Project_Cover/0.5x/Art@0.5x.png" srcset="
-                            Images/Project_Cover/0.5x/Art@0.5x.png 400w,
-                                Images/Project_Cover/1x/Art.jpg 768w,
-                                Images/Project_Cover/2x/Art@2x.jpg 1500w"></div>
+                <div class="img-hover-zoom">
+                    <img src="{{ page.image-url }}Project_Cover/0.5x/Art@0.5x.png"
+                         srcset="{{ page.image-url }}Project_Cover/0.5x/Art@0.5x.png 400w, 
+                                 {{ page.image-url }}Project_Cover/1x/Art.jpg 768w,
+                                 {{ page.image-url }}Project_Cover/2x/Art@2x.jpg 1500w"
+                         alt="">
+                    </div>
             </a>
         </div>
 
         <div class="col-3 py-3 filter branding featured">
             <a href="Alison_Cosmetics.html">
-                <div class="img-hover-zoom"><img src="Images/Project_Cover/0.5x/Alison@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/Alison@0.5x.png 400w, 
-                        Images/Project_Cover/1x/Alison.jpg 768w,
-                            Images/Project_Cover/2x/Alison@2x.jpg 1500w "></div>
+                <div class="img-hover-zoom">
+                    <img srcset="{{ page.image-url }}Project_Cover/0.5x/Alison@0.5x.png 400w, 
+                    {{ page.image-url }}Project_Cover/1x/Alison.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Alison@2x.jpg 1500w "
+                    src="{{ page.image-url }}Project_Cover/0.5x/Alison@0.5x.png">
+                </div>
             </a>
         </div>
 
         <div class="col-3 py-3 filter branding featured">
             <a href="Amnesty.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Amnesty@0.5x.png"
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Amnesty@0.5x.png"
                         srcset="
-                            Images/Project_Cover/0.5x/Amnesty@0.5x.png 400w,
-                            Images/Project_Cover/1x/Amnesty.jpg 768w,
-                            Images/Project_Cover/2x/Amnesty@2x.jpg 1500w"> </div>
+                            {{ page.image-url }}Project_Cover/0.5x/Amnesty@0.5x.png 400w,
+                            {{ page.image-url }}Project_Cover/1x/Amnesty.jpg 768w,
+                            {{ page.image-url }}Project_Cover/2x/Amnesty@2x.jpg 1500w"> </div>
             </a>
         </div>
 
         <div class="col-3 py-3 filter print featured">
             <a href="MPG.html">
-                <div class="img-hover-zoom"><img src="Images/Project_Cover/0.5x/MPG@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/MPG@0.5x.png 400W,
-                        Images/Project_Cover/1x/MPG.jpg 768w,
-                        Images/Project_Cover/2x/MPG@2x.jpg 1500w"></div>
+                <div class="img-hover-zoom"><img src="{{ page.image-url }}Project_Cover/0.5x/MPG@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/MPG@0.5x.png 400W,
+                        {{ page.image-url }}Project_Cover/1x/MPG.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/MPG@2x.jpg 1500w"></div>
             </a>
         </div>
     </div>
     <div class="row">
         <div class="col-3 py-3 filter ux featured">
             <a href="Our_Kitchen.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Kitchen@0.5x.png"
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Kitchen@0.5x.png"
                         srcset="
-                        Images/Project_Cover/0.5x/Kitchen@0.5x.png 400W,
-                        Images/Project_Cover/1x/Kitchen.jpg 768w,
-                        Images/Project_Cover/2x/Kitchen@2x.jpg 1500w"></div>
+                        {{ page.image-url }}Project_Cover/0.5x/Kitchen@0.5x.png 400W,
+                        {{ page.image-url }}Project_Cover/1x/Kitchen.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Kitchen@2x.jpg 1500w"></div>
             </a>
         </div>
 
         <div class="col-3 py-3 flex-fill filter branding featured ">
             <a href="Logos.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Logo@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/Logo@0.5x.png 400w,
-                        Images/Project_Cover/1x/Logo.jpg 768w,
-                        Images/Project_Cover/2x/Logo@2x.jpg 1500w"> </div>
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Logo@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/Logo@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/Logo.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Logo@2x.jpg 1500w"> </div>
             </a>
         </div>
 
@@ -84,39 +90,39 @@ title: Home
 
         <div class="col-3 py-3 filter ux featured ">
             <a href="Easy_Read.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Easy@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/Easy@0.5x.png 400w,
-                        Images/Project_Cover/1x/Easy.jpg 768w,
-                        Images/Project_Cover/2x/Easy@2x.jpg 1500"></div>
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Easy@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/Easy@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/Easy.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Easy@2x.jpg 1500"></div>
             </a>
         </div>
 
         <div class="col-3 py-3 filter print featured ">
             <a href="Commonplace.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Commonplace@0.5x.png"
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Commonplace@0.5x.png"
                         srcset="
-                        Images/Project_Cover/0.5x/Commonplace@0.5x.png 400w,
-                        Images/Project_Cover/1x/Commonplace.jpg 768w,
-                        Images/Project_Cover/2x/Commonplace@2x.jpg 1500w"></div>
+                        {{ page.image-url }}Project_Cover/0.5x/Commonplace@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/Commonplace.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Commonplace@2x.jpg 1500w"></div>
             </a>
         </div>
     </div>
     <div class="row">
         <div class="col-3 py-3 flex-fill filter print">
             <a href="DAM.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/DAM@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/DAM@0.5x.png 400w,
-                        Images/Project_Cover/1x/DAM.jpg 768w,
-                        Images/Project_Cover/2x/DAM@2x.jpg 1500w"></div>
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/DAM@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/DAM@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/DAM.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/DAM@2x.jpg 1500w"></div>
             </a>
         </div>
 
         <div class="col-3 py-3 flex-fill filter print">
             <a href="Isometric.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Drawing@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/Drawing@0.5x.png 400w,
-                        Images/Project_Cover/1x/Drawing.jpg 768w,
-                        Images/Project_Cover/2x/Drawing@2x.jpg 1500w"></div>
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Drawing@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/Drawing@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/Drawing.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Drawing@2x.jpg 1500w"></div>
             </a>
         </div>
 
@@ -125,77 +131,77 @@ title: Home
 
         <div class="col-3 py-3 flex-fill filter print">
             <a href="Handwriting_Overlooked.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Hand@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/DissertationMor@0.5x.png 400w,
-                        Images/Project_Cover/1x/Hand.jpg 768w,
-                        Images/Project_Cover/2x/Hand@2x.jpg 1500w"> </div>
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Hand@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/DissertationMor@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/Hand.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Hand@2x.jpg 1500w"> </div>
             </a>
         </div>
 
         <div class="col-3 py-3 filter ux ">
             <a href="ONT.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/ONT@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/ONT@0.5x.png 400w,
-                        Images/Project_Cover/1x/ONT.jpg 768w,
-                        Images/Project_Cover/2x/ONT@2x.jpg 1500w"></div>
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/ONT@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/ONT@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/ONT.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/ONT@2x.jpg 1500w"></div>
             </a>
         </div>
     </div>
     <div class="row">
         <div class="col-3 py-3 filter other ">
             <a href="One_Line.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/One@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/One@0.5x.png 400w,
-                        Images/Project_Cover/1x/One.jpg 768w,
-                        Images/Project_Cover/2x/One@2x.png 1500w"></div>
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/One@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/One@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/One.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/One@2x.png 1500w"></div>
             </a>
         </div>
 
         <div class="col-3 py-3 flex-fill filter other ">
-            <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Food@0.5x.png" srcset="
-                            Images/Project_Cover/0.5x/Food@0.5x.png 400w,
-                        Images/Project_Cover/1x/Food.jpg 768w,
-                        Images/Project_Cover/2x/Food@2x.jpg 1500w"> </div>
+            <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Food@0.5x.png" srcset="
+                            {{ page.image-url }}Project_Cover/0.5x/Food@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/Food.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Food@2x.jpg 1500w"> </div>
         </div>
 
         <div class="col-3 py-3 flex-fill filter print ux ">
             <a href="KSA_Archive.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/KSA@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/KSA@0.5x.png 400w,
-                        Images/Project_Cover/1x/KSA.jpg 768w,
-                        Images/Project_Cover/2x/KSA@2x.jpg 1500w"> </div>
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/KSA@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/KSA@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/KSA.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/KSA@2x.jpg 1500w"> </div>
             </a>
         </div>
         <div class="col-3 py-3 flex-fill filter ux ">
-            <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Sindbads@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/Sindbads@0.5x.png 400w,
-                        Images/Project_Cover/1x/Sindbads.jpg 768w,
-                        Images/Project_Cover/2x/Sindbads@2x.jpg 1500w"> </div>
+            <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Sindbads@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/Sindbads@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/Sindbads.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Sindbads@2x.jpg 1500w"> </div>
         </div>
     </div>
     <div class="row">
         <div class="col-3 py-3 flex-fill filter branding ">
-            <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Sounds@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/Sounds@0.5x.png 400w,
-                        Images/Project_Cover/1x/Sounds.jpg 768w,
-                        Images/Project_Cover/2x/Sounds@2x.jpg 1500w"> </div>
+            <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Sounds@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/Sounds@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/Sounds.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Sounds@2x.jpg 1500w"> </div>
         </div>
 
 
 
         <div class="col-3 py-3 flex-fill filter other ">
-            <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Lettering@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/Lettering@0.5x.png 400w,
-                        Images/Project_Cover/1x/Lettering.jpg 768w,
-                        Images/Project_Cover/2x/Lettering@2x.jpg 1500w"> </div>
+            <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Lettering@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/Lettering@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/Lettering.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Lettering@2x.jpg 1500w"> </div>
         </div>
 
         <div class="col-3 py-3 flex-fill filter other ">
             <a href="Letter_Challenge.html">
-                <div class="img-hover-zoom"> <img src="Images/Project_Cover/0.5x/Letter@0.5x.png" srcset="
-                        Images/Project_Cover/0.5x/Letter@0.5x.png 400w,
-                        Images/Project_Cover/1x/Letter.jpg 768w,
-                        Images/Project_Cover/2x/Letter@2x.jpg 1500w"> </div>
+                <div class="img-hover-zoom"> <img src="{{ page.image-url }}Project_Cover/0.5x/Letter@0.5x.png" srcset="
+                        {{ page.image-url }}Project_Cover/0.5x/Letter@0.5x.png 400w,
+                        {{ page.image-url }}Project_Cover/1x/Letter.jpg 768w,
+                        {{ page.image-url }}Project_Cover/2x/Letter@2x.jpg 1500w"> </div>
             </a>
         </div>
 
