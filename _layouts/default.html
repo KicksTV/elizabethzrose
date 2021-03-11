@@ -41,7 +41,7 @@
 
     </header>
 
-    <div class="container-fluid" style="margin-bottom: 170px;">
+    <div class="container-fluid">
         {{ content }}
     </div>
    
@@ -92,14 +92,16 @@
     <!-- Javascript for the filter -->
     <script>
         filterSelection("featured")
+
+
         function filterSelection(c) {
             var x, i;
-            x = document.getElementsByClassName("filterDiv");
+            x = document.getElementsByClassName("filter");
             if (c == "all") c = "";
             // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
             for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                w3RemoveClass(x[i], "d-block");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "d-block");
             }
         }
 
@@ -129,8 +131,8 @@
         }
 
         // Add active class to the current control button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
+        var btnContainer = document.getElementById("filterButtons");
+        var btns = btnContainer.getElementsByClassName("btn-filter");
         for (var i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function () {
                 var current = document.getElementsByClassName("active");
