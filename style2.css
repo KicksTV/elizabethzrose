@@ -24,10 +24,8 @@ h1 {
 footer {
   position:absolute;
   bottom:0;
-  height: 40px;
   width: 100%;
-  padding: 0 20px 0 20px;
-  
+  padding: 0 3rem 0 3rem;
 }
 a {
   text-decoration:none;
@@ -40,13 +38,49 @@ a:hover {
 footer p {
   color:grey;
 }
-
+#sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(211, 211, 211);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  display: block !important;
+}
+#sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
 .gallery img {
-  max-height: 300px;
+  max-height: 250px;
   object-fit: cover;
   width: 100%;
   height: auto;
   transition: transform .5s ease;
+}
+.gallery video {
+  max-height: 250px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform .5s ease;
+}
+.lg-img img {
+  max-height: 500px;
 }
 .img-hover-zoom {
   overflow: hidden;

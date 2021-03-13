@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <header class="container-fluid">
+    <header class="container-fluid px-5">
         <div class="row pt-4">
             <div class="col-8">
                 <a href="index.html">
@@ -41,11 +41,11 @@
 
     </header>
 
-    <div class="container-fluid">
+    <div class="container-fluid px-5" style="margin-bottom: 230px;">
         {{ content }}
     </div>
    
-    <footer>
+    <footer style="height: {{ page.footer-height }};">
         <div class="socials">
             <a href="https://www.behance.net/elizabethzb4ba">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -80,12 +80,17 @@
 
     <script>
         function openNav() {
-            document.getElementById("sidenav").style.width = "250px";
+            var sidenav = document.getElementById("sidenav")
+            sidenav.style.width = "250px"
+            sidenav.classList.add("d-block")
+
             document.getElementById("main").style.marginLeft = "250px";
         }
 
         function closeNav() {
-            document.getElementById("sidenav").style.width = "0";
+            var sidenav = document.getElementById("sidenav")
+            sidenav.classList.remove("d-block")
+            sidenav.style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>
