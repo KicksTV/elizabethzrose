@@ -2,35 +2,35 @@
 layout: default
 title: Home
 image-url: "https://elizabethzrose-site-images.s3.eu-west-2.amazonaws.com/Images/"
-footer-height: "40px"
+footer-height: "0px"
+include-carousel: true
 ---
+
 <div class="description mb-3">
     <div class="col">
         <h3>Art as Code</h3>
-        Print and UI
-        Personal
-        2019
+        <p>Print and UI Personal 2019</p>
     </div>
     <div class="row">
-        <div class="col">
-            A publication to celebrate 100 years of Bauhaus by presenting the iconic work of Bauhaus in the form of
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <p>A publication to celebrate 100 years of Bauhaus by presenting the iconic work of Bauhaus in the form of
             code. Bauhaus was all about using new tools, technology and detaching themselves from the past so the
-            project is also in support of their ideologies.
+            project is also in support of their ideologies.</p>
         </div>
-        <div class="col">
-            When you look at code it may seem overwhelming however it is all made up of simple instructions, just
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <p>When you look at code it may seem overwhelming however it is all made up of simple instructions, just
             like shapes in the work of Bauhaus. This publication lets you see the connection and resemblance. All
             code made
-            with P5.js.
+            with P5.js.</p>
         </div>
-        <div class="col">
-            I recently made a low fidelity prototype made from wireframes which presents the next idea of a website
-            which allows you to easily create art from code.
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <p>I recently made a low fidelity prototype made from wireframes which presents the next idea of a website
+            which allows you to easily create art from code.</p>
         </div>
     </div>
 </div>
 <!-- This is the Gallery -->
-<div class="Gallery mt-4">
+<div class="gallery mt-4">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3 py-1 px-1">
             <img src="{{ page.image-url }}Projects/Art_Code/0.5x/Art1@0.5x.png" srcset="
@@ -73,38 +73,4 @@ footer-height: "40px"
             <img class="img" src="{{ page.image-url }}Projects/Art_Code/8.gif"> 
         </div>
     </div>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-    </div>
 </div>
-
-<!-- This is javascript for the filter -->
-<script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var images = document.getElementsByClassName("img");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    Array.prototype.forEach.call(images, (img) => {
-        img.onclick = function () {
-            modal.style.display = "block";
-            var regex = /(0.5x)/g;
-            var src = img.src.replace(regex, '2x').replace('png', 'jpg')
-            modalImg.src = src;
-            captionText.innerHTML = img.alt;
-        }
-    })
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-</script>

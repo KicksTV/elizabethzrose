@@ -1,15 +1,4 @@
 <script>
-    function ready(callback){
-        // in case the document is already rendered
-        if (document.readyState!='loading') callback();
-        // modern browsers
-        else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
-        // IE <= 8
-        else document.attachEvent('onreadystatechange', function(){
-            if (document.readyState=='complete') callback();
-        });
-    }
-
     var carousel = document.getElementById("carouselProductCaptions")
     let carouselInner = document.getElementsByClassName("carousel-inner")[0]
     var modal = document.getElementById("myModal");
@@ -19,7 +8,6 @@
     var carouselIndicators = document.getElementsByClassName('carousel-indicators')[0]
 
     function createImageCarouselImage(img) {
-
 
         let carouselImageDiv = document.createElement("div")
         carouselImageDiv.classList.add("carousel-item")
@@ -43,17 +31,12 @@
 
         let carouselIndicator = document.createElement("li")
         carouselIndicator.setAttribute('data-target', `#${carousel.id}`)
-        carouselIndicator.setAttribute('data-slide-to', carouselInner.children.length)
-        if (carouselInner.children.length == 1) carouselIndicator.classList.add("active")
-
+        carouselIndicator.setAttribute('data-slide-to', carouselInner.children.length-2)
+        if (carouselInner.children.length == 0) carouselIndicator.classList.add("active")
 
         carouselIndicators.appendChild(carouselIndicator)
-        
-
     }
-
-    console.log(images)
-
+    console.log("Found images: ", images)
     for (let i=0;i<images.length;i++) {
         createImageCarouselImage(images[i])
 
@@ -62,31 +45,10 @@
             // captionText.innerHTML = img.alt;
             whiteTint.classList.add('d-block')
 
-            $('#carouselExampleCaptions').carousel(i)
+            $('#carouselProductCaptions').carousel(i)
         }
     }
-
     span.onclick = function () {
         modal.classList.remove('d-block')
     }
-   
-
-
-    // Get the modal
-    // var whiteTint = document.getElementById("whiteTint");
-
-    // // Get the image and insert it inside the modal - use its "alt" text as a caption
-    // // var modalImg = document.getElementById("img01");
-    // // var captionText = document.getElementById("caption");
-    // Array.prototype.forEach.call(images, (img) => {
-    //     img.onclick = function () {
-    //         modal.style.display = "block";
-    //         modalImg.src = img.src;
-    //         captionText.innerHTML = img.alt;
-    //         whiteTint.classList.add('d-block')
-    //     }
-    // })
-    
-    // // When the user clicks on <span> (x), close the modal
-    
 </script>
