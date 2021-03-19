@@ -3,6 +3,7 @@ layout: default
 title: Home
 image-url: "https://elizabethzrose-site-images.s3.eu-west-2.amazonaws.com/Images/"
 footer-height: "175px"
+include-carousel: true
 ---
 <div class="description">
     <div class="col">
@@ -17,9 +18,9 @@ footer-height: "175px"
     </div>
 </div>
 
-
+<div id="spinner"></div>
 <!-- This is the Gallery -->
-<div class="Gallery ">
+<div class="gallery invisible">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3 py-1 px-1">
             <img class="img" src="{{ page.image-url }}Projects/Logo1/0.5x/Logo1@0.5x.png" srcset="
@@ -93,34 +94,5 @@ footer-height: "175px"
             {{ page.image-url }}Projects/Logo/1x/Logo12@1x.jpg 768w,
             {{ page.image-url }}Projects/Logo/2x/Logo12@2x.jpg 1500w,">
         </div>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="img01">
-            <div id="caption"></div>
-        </div>
     </div>
 </div>
-
-
-<script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var images = document.getElementsByClassName("img");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    Array.prototype.forEach.call(images, (img) => {
-        img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = img.src;
-            captionText.innerHTML = img.alt;
-        }
-    })
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-</script>

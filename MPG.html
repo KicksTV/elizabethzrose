@@ -3,23 +3,29 @@ layout: default
 title: Home
 image-url: "https://elizabethzrose-site-images.s3.eu-west-2.amazonaws.com/Images/"
 footer-height: "175px"
+include-carousel: true
 ---
 
 <div class="description mb-3">
     <div class="col">
         <h3>MPG</h3>
-        Branding <br>
-        2019-2020
+        <p>Branding</p>
+        <p>2019-2020</p>
     </div>
     <div class="row">
-        <div class="col-4">
-            A collection of brand documents and brand assets produced during my time working for MPG as part of their rebrand. This includes the brand guidelines which was distrubuted to the whole team to help them with their transition to the new brand image. A powerpoint and keynote template ready for use for any presentation purpose.
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            A collection of brand documents and brand assets produced during my time 
+            working for MPG as part of their rebrand. This includes the brand guidelines 
+            which was distrubuted to the whole team to help them with their transition to 
+            the new brand image. A powerpoint and keynote template ready for use for any 
+            presentation purpose.
         </div>
     </div>
 </div>
 
+<div id="spinner"></div>
 <!-- This is the Gallery -->
-<div class="Gallery ">
+<div class="gallery invisible">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3 py-1 px-1">
             <img class="img" src="{{ page.image-url }}Projects/MPG/0.5x/MPG1@0.5x.png" srcset="
@@ -45,34 +51,5 @@ footer-height: "175px"
             {{ page.image-url }}Projects/MPG/1x/MPG4.jpg 768w,
             {{ page.image-url }}Projects/MPG/2x/MPG4@2x.png 1500w,">
         </div>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="img01">
-            <div id="caption"></div>
-        </div>
     </div>
 </div>
-
-<!-- This is javascript for the filter -->
-<script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var images = document.getElementsByClassName("img");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    Array.prototype.forEach.call(images, (img) => {
-        img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = img.src;
-            captionText.innerHTML = img.alt;
-        }
-    })
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-</script>
